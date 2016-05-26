@@ -2,6 +2,7 @@ from klases import Vagonas, Lokomotyvas, Traukinys
 import json
 import sys
 from operator import itemgetter
+import doctest
 
 
 def vagonuIrasymas(vag):
@@ -357,43 +358,45 @@ def meniu():
     print("meniu - spausdinti meniu")
     print("iki - išeiti iš programos")
 
-vag = []
-lok = []
-trauk = []
-meniu()
 
-while True:
-    pasirinkimas = input()
-    if pasirinkimas == '1':
-        vag = sukurtiVagona(vag)
-    elif pasirinkimas == '2':
-        vag = vagonuNuskaitymas(vag)
-    elif pasirinkimas == '3':
-        vagonuIrasymas(vag)
-    elif pasirinkimas == '4':
-        vagonuSarasas(vag)
-    elif pasirinkimas == '5':
-        lok = sukurtiLokomotyva(lok)
-    elif pasirinkimas == '6':
-        lok = lokomotyvuNuskaitymas(lok)
-    elif pasirinkimas == '7':
-        lokomotyvuIrasymas(lok)
-    elif pasirinkimas == '8':
-        lokomotyvuSarasas(lok)
-    elif pasirinkimas == '9':
-        trauk, lok = sukurtiTraukini(trauk, lok)
-    elif pasirinkimas == '10':
-        traukiniuSarasas(trauk)
-    elif pasirinkimas == '11':
-        trauk, vag == pridetiVagona(trauk, vag)
-    elif pasirinkimas == '12':
-        traukiniaiRusiuoti(trauk)
-    elif pasirinkimas == '13':
-        traukiniuIrasymas(trauk)
-    elif pasirinkimas == 'meniu':
-        meniu()
-    elif pasirinkimas == 'iki':
-        sys.exit()
-    else:
-        print("Tokio pasirinkimo nėra")
-        meniu()
+if __name__ == "__main__":
+    doctest.testmod()
+    vag = []
+    lok = []
+    trauk = []
+    meniu()
+    while True:
+        pasirinkimas = input()
+        if pasirinkimas == '1':
+            vag = sukurtiVagona(vag)
+        elif pasirinkimas == '2':
+            vag = vagonuNuskaitymas(vag)
+        elif pasirinkimas == '3':
+            vagonuIrasymas(vag)
+        elif pasirinkimas == '4':
+            vagonuSarasas(vag)
+        elif pasirinkimas == '5':
+            lok = sukurtiLokomotyva(lok)
+        elif pasirinkimas == '6':
+            lok = lokomotyvuNuskaitymas(lok)
+        elif pasirinkimas == '7':
+            lokomotyvuIrasymas(lok)
+        elif pasirinkimas == '8':
+            lokomotyvuSarasas(lok)
+        elif pasirinkimas == '9':
+            trauk, lok = sukurtiTraukini(trauk, lok)
+        elif pasirinkimas == '10':
+            traukiniuSarasas(trauk)
+        elif pasirinkimas == '11':
+            trauk, vag == pridetiVagona(trauk, vag)
+        elif pasirinkimas == '12':
+            traukiniaiRusiuoti(trauk)
+        elif pasirinkimas == '13':
+            traukiniuIrasymas(trauk)
+        elif pasirinkimas == 'meniu':
+            meniu()
+        elif pasirinkimas == 'iki':
+            sys.exit()
+        else:
+            print("Tokio pasirinkimo nėra")
+            meniu()
