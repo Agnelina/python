@@ -1,0 +1,4 @@
+Programa skirta imituoti darbà su traukiniais.
+Programa paraðyta python3.5.1 versija
+Programà paleidus atsidaro veiksmø meniu, kurá visada galima iðsikviesti suvedus "meniu".
+Ið programos iðeinama surinkus "iki".
